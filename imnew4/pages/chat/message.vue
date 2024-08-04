@@ -109,7 +109,7 @@
 													 <!-- <image :src="row.msg.content." style="width: 20px;height: 20px;" mode=""></image> -->
 												</view>
 												<!-- 引用消息兼容-->
-												<view v-if="typeof row.msg.content.yy =='string'"
+												<view v-if="typeof row.msg.content.yy =='string'" 
 													class="yinyong_content"> 
 													<rich-text
 														:nodes="row.msg.content.yy ? getHtml(row.msg.content.yy): ' '"
@@ -2085,16 +2085,28 @@
 				//监听键盘高度变化
 				uni.onKeyboardHeightChange((res) => {
 					_this.Keyboard = res.height;
-
 					if (res.height) {
 						// @好友软键盘高度变化
 						this.popHeight = uni.getSystemInfoSync().windowHeight - res.height;
 						_this.getScrollContentHeight("show", 0);
+						 _this.scrollToView = null;
+						/** 滚动到指定位置 */
+						setTimeout(function() {
+							_this.$nextTick(function() {
+								 _this.scrollToView = 'msg' + _this.msgList.list[_this.msgList.list.length - 1].msg.id;
+							});
+						}, 400);
 					} else {
 						this.popHeight = uni.getSystemInfoSync().windowHeight;
 						_this.getScrollContentHeight("hide", 0);
 					}
+					
+					
+				
+					
 				});
+				
+				
 				uni.$on("update_text_msg", function(res) {
 					_this.textMsg += res.msg;
 					// @好友  如果消息不为空，
@@ -2760,7 +2772,7 @@
 
 										break;
 									case 4:
-
+										
 										// 显示引用，引用内容
 										// type=0文字，type=2图片， type其他
 										// content type name
@@ -2778,7 +2790,7 @@
 										} else if (type == 2) {
 											msg_content = {
 												...content,
-												text: "",
+												text: " ",
 												type: type,
 												yy_username: name,
 											}
