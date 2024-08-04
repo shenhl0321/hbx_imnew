@@ -1,0 +1,62 @@
+<template>
+    <view class="page">
+        <pay-keyboard  :set_info = "set_info" :show_key="show_key" ref="payKeyboard" :set_msg="set_msg" @hideFun="hideFun" @getPassword="getPassword" :password="password"></pay-keyboard>
+    </view>
+</template>
+
+<script>
+    import payKeyboard from '../../../components/uni-keyword/uni-keyword';
+    import _get from '../../../common/_get';
+    import _hook from '../../../common/_hook';
+    export default {
+        components: {
+            payKeyboard
+        },
+        data() {
+            return {
+                title: this.$t('pay.p_input_trade_pass'),
+                show_key: true,
+                password:'',
+                set_msg:this.$t('pay.p_input_trade_pass'),
+                set_info:this.$t('pay.p_input_trade_pass_to_confirm'),
+                page_params:{},
+                click:true
+            }
+        },
+        onLoad(options) {
+            this.page_params = options;
+        },
+        onShow(){
+            _hook.routeSonHook();
+          uni.$on('clean_password_data',this.cleanNum);
+        },
+        methods: {
+            showFun() {
+                this.show_key = true
+            },
+            hideFun() {
+                this.show_key = false
+            },
+            getPassword(n) {
+                console.log("用户输入的密码", n);
+                this.page_params.trade_password = n.password;
+                let _this = this;
+                if(!_this.click) return false;
+                _this.click = false;
+                //此处实际应用时应该post到服务器，然后服务器广播长连接
+                uni.showLoading({title:this.$t('newAdd.submit')});
+                _get.createHongBao( _this.page_params,function (res) {
+                    uni.navigateBack();
+                },function (res) {
+                    uni.hideLoading();
+                    uni.showToast({title:res.msg,icon:'none'});
+                    _this.click = true;
+                    _this.$refs.payKeyboard.cleanNum();
+                })
+            },
+            cleanNum(){
+                this.$refs.payKeyboard.cleanNum();
+            }
+        }
+    }
+</script>

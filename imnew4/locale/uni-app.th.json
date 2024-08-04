@@ -1,0 +1,31 @@
+{
+  "common": {
+    "uni.app.quit": "Nhấn nút để thoát khỏi ứng dụng",
+    "uni.async.error": "Kết nối máy phục vụ thời gian, nhấn vào màn hình để thử lại",
+    "uni.showActionSheet.cancel": "Hủy bỏ",
+    "uni.showModal.cancel": "Hủy bỏ",
+    "uni.showModal.confirm": "Chắc chắn",
+    "uni.chooseImage.cancel": "Hủy bỏ",
+    "uni.chooseImage.sourceType.album": "Chọn từ album ảnh",
+    "uni.chooseImage.sourceType.camera": "Chụp ảnh",
+    "uni.chooseVideo.cancel": "Hủy bỏ",
+    "uni.chooseVideo.sourceType.album": "Chọn từ album ảnh",
+    "uni.chooseVideo.sourceType.camera": "Chụp ảnh",
+    "uni.previewImage.cancel": "Hủy bỏ",
+    "uni.previewImage.button.save": "Lưu hình ảnh",
+    "uni.previewImage.save.success": "Lưu ảnh vào tập ảnh thành công",
+    "uni.previewImage.save.fail": "Lỗi lưu ảnh vào tập ảnh",
+    "uni.setClipboardData.success": "Nội dung đã được SAO chép",
+    "uni.scanCode.title": "Quét mã",
+    "uni.scanCode.album": "Album",
+    "uni.scanCode.fail": "Nhận ra thất bại",
+	"uni.scanCode.flash.on": "Chạm bật đèn sáng",
+	"uni.scanCode.flash.off": "Chạm nhẹ để tắt",
+    "uni.picker.done": "Hoàn thành",
+    "uni.picker.cancel": "Hủy bỏ",
+	"uni.chooseLocation.search":"Tìm kiếm địa chỉ",
+	"uni.chooseLocation.cancel":"Hủy bỏ"
+  },
+  "ios": {},
+  "android": {}
+}

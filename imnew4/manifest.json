@@ -1,0 +1,306 @@
+{
+    "name" : "CVC Team",
+    "appid" : "__UNI__8669DEA",
+    "description" : "CVC Team",
+    "versionName" : "1.1.9",
+    "versionCode" : 117,
+    "transformPx" : false,
+    "networkTimeout" : {
+        "request" : 6000,
+        "connectSocket" : 10000,
+        "uploadFile" : 60000,
+        "downloadFile" : 6000
+    },
+    "app-plus" : {
+        /* 是否启用`自定义组件模式`，为true表示新的`自定义组件模式` ，否则为`template模板模式` */
+        "usingComponents" : true,
+        "compatible" : {
+            "ignoreVersion" : true //true表示忽略版本检查提示框，HBuilderX1.9.0及以上版本支持  
+        },
+        /* 5+App特有相关 */
+        "modules" : {
+            "Maps" : {},
+            "Messaging" : {},
+            "Webview-x5" : {},
+            "Geolocation" : {},
+            "Speech" : {},
+            "VideoPlayer" : {},
+            "Share" : {},
+            "Barcode" : {},
+            "Camera" : {},
+            "Contacts" : {},
+            "Record" : {},
+            "Push" : {}
+        },
+        /* 模块配置 */
+        "distribute" : {
+            /* 应用发布信息 */
+            "android" : {
+                /* android打包配置 */
+                "permissions" : [
+                    "<uses-feature android:name=\"android.hardware.camera\"/>",
+                    "<uses-feature android:name=\"android.hardware.camera.autofocus\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_FINE_LOCATION\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.CALL_PHONE\"/>",
+                    "<uses-permission android:name=\"android.permission.CAMERA\"/>",
+                    "<uses-permission android:name=\"android.permission.CHANGE_NETWORK_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.CHANGE_WIFI_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.FLASHLIGHT\"/>",
+                    "<uses-permission android:name=\"android.permission.GET_ACCOUNTS\"/>",
+                    "<uses-permission android:name=\"android.permission.INTERNET\"/>",
+                    "<uses-permission android:name=\"android.permission.MODIFY_AUDIO_SETTINGS\"/>",
+                    "<uses-permission android:name=\"android.permission.MOUNT_UNMOUNT_FILESYSTEMS\"/>",
+                    "<uses-permission android:name=\"android.permission.READ_CONTACTS\"/>",
+                    "<uses-permission android:name=\"android.permission.READ_LOGS\"/>",
+                    "<uses-permission android:name=\"android.permission.READ_PHONE_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.RECORD_AUDIO\"/>",
+                    "<uses-permission android:name=\"android.permission.USE_FINGERPRINT\"/>",
+                    "<uses-permission android:name=\"android.permission.VIBRATE\"/>",
+                    "<uses-permission android:name=\"android.permission.WAKE_LOCK\"/>",
+                    "<uses-permission android:name=\"android.permission.WRITE_CONTACTS\"/>",
+                    "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\"/>",
+                    "<uses-permission android:name=\"android.permission.WRITE_SETTINGS\"/>"
+                ],
+                "abiFilters" : [ "armeabi-v7a", "arm64-v8a", "x86" ],
+                "targetSdkVersion" : 28,
+                "minSdkVersion" : 21,
+                "schemes" : "xi0ksa1u5"
+            },
+            "ios" : {
+                "idfa" : false,
+                "urltypes" : "xi0ksa1u5",
+                "dSYMs" : false,
+                "deploymentTarget" : "11.0"
+            },
+            /* ios打包配置 */
+            "sdkConfigs" : {
+                "speech" : {},
+                "ad" : {},
+                "push" : {
+                    "unipush" : {
+                        "version" : "2",
+                        "offline" : true,
+                        "icons" : {
+                            "small" : {
+                                "ldpi" : "C:/Users/Administrator/Desktop/imnew/图标/2.png",
+                                "mdpi" : "C:/Users/Administrator/Desktop/imnew/图标/2.png",
+                                "hdpi" : "C:/Users/Administrator/Desktop/imnew/图标/2.png",
+                                "xhdpi" : "C:/Users/Administrator/Desktop/imnew/图标/2.png",
+                                "xxhdpi" : "C:/Users/Administrator/Desktop/imnew/图标/2.png"
+                            }
+                        }
+                    }
+                },
+                "payment" : {
+                    "alipay" : {
+                        "__platform__" : [ "ios", "android" ]
+                    },
+                    "appleiap" : {}
+                },
+                "maps" : {
+                    "amap" : {
+                        "appkey_ios" : "fd43ec22e590b49d681b107c58365f6e",
+                        "appkey_android" : "94893efafc639762107936837aa1b628"
+                    }
+                },
+                "geolocation" : {
+                    "baidu" : {
+                        "__platform__" : [ "ios", "android" ],
+                        "appkey_ios" : "fd43ec22e590b49d681b107c58365f6e",
+                        "appkey_android" : "94893efafc639762107936837aa1b628"
+                    }
+                },
+                "share" : {
+                    "qq" : {
+                        "appid" : "546546546",
+                        "UniversalLinks" : "https://static-e19da9aa-83b5-466e-bf2a-8e460117cdf3.bspapp.com/qq_conn/546546546/"
+                    },
+                    "weixin" : {
+                        "appid" : "546546546",
+                        "UniversalLinks" : "https://static-e19da9aa-83b5-466e-bf2a-8e460117cdf3.bspapp.com/uni-universallinks/__UNI__A2E5AF1/"
+                    }
+                }
+            },
+            "icons" : {
+                "ios" : {
+                    "appstore" : "unpackage/res/icons/1024x1024.png",
+                    "ipad" : {
+                        "app" : "unpackage/res/icons/76x76.png",
+                        "app@2x" : "unpackage/res/icons/152x152.png",
+                        "notification" : "unpackage/res/icons/20x20.png",
+                        "notification@2x" : "unpackage/res/icons/40x40.png",
+                        "proapp@2x" : "unpackage/res/icons/167x167.png",
+                        "settings" : "unpackage/res/icons/29x29.png",
+                        "settings@2x" : "unpackage/res/icons/58x58.png",
+                        "spotlight" : "unpackage/res/icons/40x40.png",
+                        "spotlight@2x" : "unpackage/res/icons/80x80.png"
+                    },
+                    "iphone" : {
+                        "app@2x" : "unpackage/res/icons/120x120.png",
+                        "app@3x" : "unpackage/res/icons/180x180.png",
+                        "notification@2x" : "unpackage/res/icons/40x40.png",
+                        "notification@3x" : "unpackage/res/icons/60x60.png",
+                        "settings@2x" : "unpackage/res/icons/58x58.png",
+                        "settings@3x" : "unpackage/res/icons/87x87.png",
+                        "spotlight@2x" : "unpackage/res/icons/80x80.png",
+                        "spotlight@3x" : "unpackage/res/icons/120x120.png"
+                    }
+                },
+                "android" : {
+                    "hdpi" : "unpackage/res/icons/72x72.png",
+                    "ldpi" : "unpackage/res/icons/48x48.png",
+                    "mdpi" : "unpackage/res/icons/48x48.png",
+                    "xhdpi" : "unpackage/res/icons/96x96.png",
+                    "xxhdpi" : "unpackage/res/icons/144x144.png",
+                    "xxxhdpi" : "unpackage/res/icons/192x192.png"
+                }
+            },
+            "splashscreen" : {
+                "ios" : {
+                    "iphone" : {
+                        "portrait-896h@3x" : "C:/Users/Administrator/Pictures/bg.png",
+                        "landscape-896h@3x" : "",
+                        "portrait-896h@2x" : "C:/Users/Administrator/Pictures/bg.png",
+                        "landscape-896h@2x" : "",
+                        "iphonex" : "C:/Users/Administrator/Pictures/bg.png",
+                        "iphonexl" : "",
+                        "retina55" : "C:/Users/Administrator/Pictures/bg.png",
+                        "retina55l" : "",
+                        "retina47" : "C:/Users/Administrator/Pictures/bg.png",
+                        "retina47l" : "",
+                        "retina40" : "",
+                        "retina40l" : "",
+                        "retina35" : ""
+                    },
+                    "ipad" : {
+                        "portrait-1366h@2x" : "",
+                        "landscape-1366h@2x" : "",
+                        "portrait-1194h@2" : "",
+                        "landscape-1194h@2x" : "",
+                        "portrait-1112h@2x" : "",
+                        "landscape-1112h@2x" : "",
+                        "portrait-retina7" : "",
+                        "landscape-retina7" : "",
+                        "portrait7" : "",
+                        "landscape7" : "",
+                        "portrait-1194h@2x" : ""
+                    },
+                    "storyboard" : "H:/chrome浏览器下载/APP启动图/默认启动图/CustomStoryboard.zip"
+                },
+                "android" : {
+                    "xxhdpi" : "C:/Users/Administrator/Desktop/image_2022-05-31_00-48-12.png",
+                    "hdpi" : "C:/Users/Administrator/Desktop/image_2022-05-31_00-48-12.png",
+                    "xhdpi" : "C:/Users/Administrator/Desktop/image_2022-05-31_00-48-12.png"
+                },
+                "iosStyle" : "common",
+                "androidStyle" : "common",
+                "useOriginalMsgbox" : true
+            }
+        },
+        "nativePlugins" : {
+            "uniapp_kill_service_plugin" : {
+                "__plugin_info__" : {
+                    "name" : "插件名称",
+                    "description" : "前台保护插件",
+                    "platforms" : "Android",
+                    "url" : "",
+                    "android_package_name" : "",
+                    "ios_bundle_id" : "",
+                    "isCloud" : false,
+                    "bought" : -1,
+                    "pid" : "",
+                    "parameters" : {}
+                }
+            },
+            "TencentCloud-TUICallKit" : {
+                "__plugin_info__" : {
+                    "name" : "【官方】腾讯云音视频通话插件TencentCloud-TUICallKit",
+                    "description" : "TUICallKit 是腾讯云官方推出的音视频通话插件，支持 1v1 通话和群组通话，并提供“类微信\"的 UI 交互，开发者仅需三个 API 就可实现。",
+                    "platforms" : "Android,iOS",
+                    "url" : "https://ext.dcloud.net.cn/plugin?id=9035",
+                    "android_package_name" : "xyz.im2021.app",
+                    "ios_bundle_id" : "",
+                    "isCloud" : true,
+                    "bought" : 1,
+                    "pid" : "9035",
+                    "parameters" : {}
+                }
+            }
+        },
+        "splashscreen" : {
+            "waiting" : false
+        },
+        "locales" : {
+            "th" : {
+                "common" : {
+                    "uni.app.quit" : "Nhấn nút để thoát khỏi ứng dụng",
+                    "uni.async.error" : "Kết nối máy phục vụ thời gian, nhấn vào màn hình để thử lại",
+                    "uni.showActionSheet.cancel" : "Hủy bỏ",
+                    "uni.showModal.cancel" : "Hủy bỏ",
+                    "uni.showModal.confirm" : "Chắc chắn",
+                    "uni.chooseImage.cancel" : "Hủy bỏ",
+                    "uni.chooseImage.sourceType.album" : "Chọn từ album ảnh",
+                    "uni.chooseImage.sourceType.camera" : "Chụp ảnh",
+                    "uni.chooseVideo.cancel" : "Hủy bỏ",
+                    "uni.chooseVideo.sourceType.album" : "Chọn từ album ảnh",
+                    "uni.chooseVideo.sourceType.camera" : "Chụp ảnh",
+                    "uni.previewImage.cancel" : "Hủy bỏ",
+                    "uni.previewImage.button.save" : "Lưu hình ảnh",
+                    "uni.previewImage.save.success" : "Lưu ảnh vào tập ảnh thành công",
+                    "uni.previewImage.save.fail" : "Lỗi lưu ảnh vào tập ảnh",
+                    "uni.setClipboardData.success" : "Nội dung đã được SAO chép",
+                    "uni.scanCode.title" : "Quét mã",
+                    "uni.scanCode.album" : "Album",
+                    "uni.scanCode.fail" : "Nhận ra thất bại",
+                    "uni.scanCode.flash.on" : "Chạm bật đèn sáng",
+                    "uni.scanCode.flash.off" : "Chạm nhẹ để tắt",
+                    "uni.picker.done" : "Hoàn thành",
+                    "uni.picker.cancel" : "Hủy bỏ"
+                }
+            }
+        }
+    },
+    /* SDK配置 */
+    "quickapp" : {},
+    /* 快应用特有相关 */
+    "mp-weixin" : {
+        /* 小程序特有相关 */
+        "appid" : "",
+        "setting" : {
+            "urlCheck" : true
+        }
+    },
+    "h5" : {
+        "devServer" : {
+            "https" : false,
+            "useLocalIp" : true
+        },
+        "title" : "IM CHAT",
+        "domain" : "",
+        "optimization" : {
+            "treeShaking" : {
+                "enable" : false
+            }
+        },
+        "template" : "index.html",
+        "router" : {
+            "mode" : "hash",
+            "base" : "./"
+        },
+        "sdkConfigs" : {
+            "maps" : {
+                "qqmap" : {
+                    "key" : "QBLBZ-6DCCJ-PJUFL-KVSF3-XPOUJ-2UBOG"
+                }
+            }
+        }
+    },
+    "vueVersion" : "2",
+    "_qq_spaceID" : "e19da9aa-83b5-466e-bf2a-8e460117cdf3",
+    "_spaceID" : "e19da9aa-83b5-466e-bf2a-8e460117cdf3",
+    "fallbackLocale" : "zh-Hans",
+    "locale" : "th"
+}

@@ -1,0 +1,32 @@
+{
+	"common": {
+		"uni.app.quit": "Pressione novamente para sair do aplicativo",
+		"uni.async.error": "A conexão com o servidor expira, toque na tela para tentar novamente",
+		"uni.showActionSheet.cancel": "Cancelar",
+		"uni.showModal.cancel": "Cancelar",
+		"uni.showModal.confirm": "Tem certeza",
+		"uni.chooseImage.cancel": "Cancelar",
+		"uni.chooseImage.sourceType.album": "Selecione no álbum",
+		"uni.chooseImage.sourceType.camera": "injeção",
+		"uni.chooseVideo.cancel": "Cancelar",
+		"uni.chooseVideo.sourceType.album": "Selecione no álbum",
+		"uni.chooseVideo.sourceType.camera": "injeção",
+		"uni.previewImage.cancel": "Cancelar",
+		"uni.previewImage.button.save": "Salve a imagem",
+		"uni.previewImage.save.success": "A imagem foi salva no álbum com sucesso",
+		"uni.previewImage.save.fail": "Falha ao salvar imagem no álbum",
+		"uni.setClipboardData.success": "O conteúdo foi copiado",
+		"uni.scanCode.title": "Digitalize o código",
+		"uni.scanCode.album": "Álbum",
+		"uni.scanCode.fail": "Falha na identificação",
+		"uni.scanCode.flash.on": "Toque em Iluminar",
+		"uni.scanCode.flash.off": "Toque em Fechar",
+		"uni.startSoterAuthentication.authContent": "Reconhecimento de impressão digital...",
+		"uni.picker.done": "acabar",
+		"uni.picker.cancel": "Cancelar",
+		"uni.chooseLocation.search": "Procurar",
+		"uni.chooseLocation.cancel": "Cancelar"
+	},
+	"ios": {},
+	"android": {}
+}
